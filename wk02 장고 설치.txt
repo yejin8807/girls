@@ -1,0 +1,18 @@
+D:\>mkdir work  # work 폴더 생성
+D:\>cd work     # work 폴더 진입
+D:\work>        # 진입된 상태 확인
+D:\work>python -m venv myvenv   # myvenv라는 이름으로 가상 환경 생성
+
+# 가상 환경 활성화/비활성화
+D:\work>myvenv\scripts\activate             # 활성화 지시
+(myvenv) D:\work>                           # 활성화 된 상태
+(myvenv) D:\work>myvenv\scripts\deactivate  # 비활성화 지시
+D:\work>                                    # 비활성화 된 상태
+
+# 활성화 된 가상 환경에 장고 설치
+(myvenv) D:\work>pip install django~=2.0.0  # 장고 2.최신 버전으로 설치
+(myvenv) D:\work>pip install django=2.1.1   # 장고 2.1.1 버전으로 설치
+(myvenv) D:\work>pip install django         # 장고 2.최신 버전으로 설치
+
+# pip 업그레이드
+(myvenv) D:\work>python -m pip install --upgrade pip
