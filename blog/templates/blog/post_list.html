@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>블로그 글 목록</title>
+</head>
+<body>
+    <h1><a href="">장고 걸즈 블로그</a></h1>
+    {{ posts }} <br/><br/>
+    {# 아래 루프 처리 부분이 장고 탬플릿 태그 #}
+    {% for post in posts %}
+        {{ post }} <br/>
+    {% endfor  %}
+
+
+    {% for post in posts %}
+    <div>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>게시일시: {{ post.published_date }}</p>
+            <p>{{ post.textlinebreaks }}</p>
+        </div>
+    {% endfor %}
+
+</body>
+</html>
